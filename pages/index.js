@@ -1,8 +1,9 @@
 import Link from "next/link"
+
 export const getStaticProps = async () => {
   const data = await fetch("https://www.balldontlie.io/api/v1/players");
   const players = await data.json();
-  console.log(players);
+  // console.log(players);
   return {
     props: {
       players,
@@ -11,17 +12,16 @@ export const getStaticProps = async () => {
 };
 export default function Home({ players }) {
   return (
-    <div className="bg-blue-300 h-screen mx-auto overflow-scroll overflow-x-hidden">
-      <h1 className="text-blue-600 py-12">View all NBA players</h1>
+    <div className="bg-blue-300 h-screen mx-auto overflow-scroll overflow-x-hidden pt-10">
       <div className="w-9/12 mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
         {players.data.map((player) => (
           <Link href={"/" +player.id} key={player.id}>
           <a>
             <div>
             {" "}
-            <div class="max-w-sm rounded bg-blue-200 overflow-hidden shadow-lg py-6">
-              <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2">
+            <div className="max-w-sm rounded bg-blue-200 overflow-hidden shadow-lg py-6">
+              <div className="px-6 py-4">
+                <div className="font-bold text-xl mb-2">
                   {player.first_name} {player.last_name}
                 </div>
               </div>
