@@ -1,4 +1,4 @@
-// import 'tailwindcss/tailwind.css'
+import 'tailwindcss/tailwind.css'
 import Navbar from "../Components/Navbar";
 // import "../styles/globals.css";
 import "../styles/t.min.css";
@@ -6,7 +6,7 @@ import Layout from "./Layout";
 function MyApp({ Component, pageProps }) {
   return (
     <Layout>
-      <Navbar />
+      <Navbar/>
       <Component {...pageProps} />
     </Layout>
   );

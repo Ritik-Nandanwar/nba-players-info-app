@@ -20,10 +20,10 @@ export default function Home({
   blogs
 }) {
   console.log(blogs);
-  return <div className="w-9/12 mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
+  return <div className="w-full max-h-10 mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-10">
     {/* <Navbar/> */}
     {blogs.map(blog => (
-      <div className="" key={blog.fields.slug}>
+      <div className="h-1/4" style={{height : "20vh"}} key={blog.fields.slug}>
         <Blog innerContent={blog}/>
       </div>
     ))}
