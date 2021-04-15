@@ -1,6 +1,6 @@
 import { createClient } from "contentful";
-// import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Image from "next/image";
+import marked from 'marked';
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -35,15 +35,43 @@ export const getStaticProps = async ({ params }) => {
   };
 };
 
-export default function RecipeDetails({ blog }) {
-  //   const { featuredImage, title, cookingTime, ingredients, method } = recipe.fields
-  //   console.log(method)
-
+export default function blog({ blog }) {
+    console.log(blog);
   return (
-    <div>
-      <h1>
-          {blog.fields.title}
-      </h1>
-    </div>
+    <div className="h-1/4 ">
+        <div className="border-2 border-purple-500 mx-16 my-8 p-4 rounded-md bg-purple-100  shadow-md ">
+             {/* <img src={"https:"+ blog.fields.featuredImage.fields.file.details.image.url} 
+            width={blog.fields.featuredImage.fields.file.details.image.width}
+            height={blog.fields.featuredImage.fields.file.details.image.height}
+            >
+                
+            </img>  */}
+            <img src={ "https:" + blog.fields.thumbnail.fields.file.url} 
+
+            alt="Thumb image"
+
+            width={blog.fields.thumbnail.fields.file.details.image.width}
+
+            height={blog.fields.thumbnail.fields.file.details.image.height}/>
+          <div>
+            <div className=" text-xl text-purple-600">
+              {blog.fields.title}
+            </div>
+
+            <div className="author flex text-purple-600 text-xs mt-2 align-middle font-mono space-x-4">
+              <span className="text-gray-700">By</span><div className="text-xl text-purple-600 "> Ritik N</div>{" "}
+              <span className="text-gray-700">
+                {blog.sys.createdAt.slice(0, 10)}
+              </span>
+            </div>
+            <div
+              className="text-lg truncate h-1/3"
+              dangerouslySetInnerHTML={{
+                __html: marked(blog.fields.body),
+              }}
+            ></div>
+          </div>
+        </div>
+      </div>
   );
 }

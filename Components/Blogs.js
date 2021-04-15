@@ -1,6 +1,7 @@
 // import moment from "moment";
 import marked from "marked";
 import Link from "next/link";
+
 export default function Blog({ innerContent }) {
   return (
     // <div className="flex sm:grid-cols-4 md:grid-cols-2 lg:grid-cols-3">
