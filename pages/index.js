@@ -43,7 +43,7 @@ export default function Home({ blogs }) {
               </span>
             </div>
 
-            <div className="grid py-12  sm:grid-cols-3 md:grid-cols-3 max-w-sm">
+            <div className="grid py-12 grid-cols-3 max-w-xl">
               <a href="https://github.com/Ritik-Nandanwar" target="_blank">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
