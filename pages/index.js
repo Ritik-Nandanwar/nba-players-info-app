@@ -31,7 +31,7 @@ export default function Home({ blogs }) {
   return (
     <>
       <div className="bg-purple-100  border border-purple-300  ">
-        <div className="flex-none justify-between px-24 md:flex max-w-6xl mx-auto">
+        <div className="flex-none justify-between sm:px-6 md:px-24  md:flex max-w-6xl mx-auto">
           <div className=" flex flex-col justify-between align-middle px-6  pt-24">
             <div className="flex flex-col">
               <span className="text-3xl font-mono flex-1 py-4">
