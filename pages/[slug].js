@@ -17,7 +17,7 @@ export const getStaticPaths = async () => {
       params: { slug: item.fields.slug },
     };
   });
-  console.log(paths);
+  // console.log(paths);
   return {
     paths,
     fallback: false,
@@ -29,14 +29,14 @@ export const getStaticProps = async ({ params }) => {
     content_type: "blog",
     "fields.slug": params.slug,
   });
-  console.log();
+  // console.log();
   return {
     props: { blog: items[0] },
   };
 };
 
 export default function blog({ blog }) {
-    console.log(blog);
+    // console.log(blog);
   return (
     <div className="h-1/4 ">
         <div className="border-2 border-purple-500 mx-16 my-8 p-4 rounded-md bg-purple-100  shadow-md ">
