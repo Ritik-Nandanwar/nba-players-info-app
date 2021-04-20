@@ -2,7 +2,7 @@ import Link from "next/link";
 export default function Navbar() {
   return (
     <div className="bg-purple-400 px-8 py-6 text-white  shadow-sm grid space-y-4 justify-items-center sm:flex sm:justify-between">
-      <div className="class="text-3xl font-mono mt-2 text-center"">
+      <div className="class="text-3xl font-mono mt-2 text-center">
         <Link href="/">
           <a>Logo</a>
         </Link>
