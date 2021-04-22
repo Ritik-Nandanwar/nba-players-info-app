@@ -38,8 +38,8 @@ export const getStaticProps = async ({ params }) => {
 export default function blog({ blog }) {
     // console.log(blog);
   return (
-    <div className="h-1/4 ">
-        <div className="border-2 border-purple-500 mx-16 my-8 p-4 rounded-md bg-purple-100  shadow-md ">
+    <div className="h-1/4  overflow-auto">
+        <div className="border-2 border-purple-500 mx-6 md:mx-16 my-8 p-4 rounded-md bg-purple-100  shadow-md ">
              {/* <img src={"https:"+ blog.fields.featuredImage.fields.file.details.image.url} 
             width={blog.fields.featuredImage.fields.file.details.image.width}
             height={blog.fields.featuredImage.fields.file.details.image.height}
@@ -65,7 +65,7 @@ export default function blog({ blog }) {
               </span>
             </div>
             <div
-              className="text-lg truncate h-1/3"
+              className="text-lg  h-1/3"
               dangerouslySetInnerHTML={{
                 __html: marked(blog.fields.body),
               }}
