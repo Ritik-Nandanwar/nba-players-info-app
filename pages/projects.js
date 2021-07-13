@@ -92,7 +92,7 @@ function projects() {
 
                 <a
                   class="text-indigo-500 mt-6 items-center inline-flex"
-                  href="https://github.com/Ritik-Nandanwar/Generate-color-Reaact-app.git"
+                  href="https://github.com/Ritik-Nandanwar/POI101"
                   target="_blank"
                 >
                   View Code
